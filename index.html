@@ -755,9 +755,14 @@
     function handleSubmit(e) {
       e.preventDefault();
       const btn = e.target.querySelector('button');
-      btn.textContent = '✓ Message Sent!';
-      btn.style.background = '#00cc99';
-      setTimeout(() => { btn.textContent = 'Send Message →'; btn.style.background = ''; }, 3000);
+      btn.textContent = 'Contact form is not connected yet';
+      btn.style.background = '#6b7194';
+      btn.disabled = true;
+      setTimeout(() => {
+        btn.textContent = 'Send Message →';
+        btn.style.background = '';
+        btn.disabled = false;
+      }, 3000);
     }
 
     // Scroll-reveal with IntersectionObserver
